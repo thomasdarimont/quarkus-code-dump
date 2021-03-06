@@ -10,15 +10,15 @@ When you use the quarkus dev mode, then Quarkus generates classes in memory for 
 
 This example project contains decompiled dumps of the classes generated in memory by the Quarkus dev mode.
 
-The dump was created with the following procedure:
-0. Run the quarkus app and attach a debugger.
-1. Set a breakpoint at the last return of `io.quarkus.bootstrap.classloading.QuarkusClassLoader.getState`
-2. Run the following expression in your debugger:
+The dump was created with the following procedure:  
+1. Run the quarkus app and attach a debugger.
+2. Set a breakpoint at the last return of `io.quarkus.bootstrap.classloading.QuarkusClassLoader.getState`
+3. Run the following expression in your debugger:
 ```
 new ObjectOutputStream(new FileOutputStream("../quarkus-in-memory-classes.ser")).writeObject(((MemoryClassPathElement) this.elements.get(0)).resources)
 ```
-3. Run the `DumpClassFiles` main class to generate the class files into the `target/generated-classes` folder
-4. Use a decompiler of your choice, e.g. fern-flower with IntelliJ, to look at the generated code.
+4. Run the `DumpClassFiles` main class to generate the class files into the `target/generated-classes` folder
+5. Use a decompiler of your choice, e.g. fern-flower with IntelliJ, to look at the generated code.
 For your convenience I copied all the decompiled source files into the [src/main/java-dump](src/main/java-dump) folder for quick inspection.
 
 ## Running the application in dev mode
