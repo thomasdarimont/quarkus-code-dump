@@ -11,6 +11,7 @@ When you use the quarkus dev mode, then Quarkus generates classes in memory for 
 This example project contains decompiled dumps of the classes generated in memory by the Quarkus dev mode.
 
 The dump was created with the following procedure:
+0. Run the quarkus app and attach a debugger.
 1. Set a breakpoint at the last return of `io.quarkus.bootstrap.classloading.QuarkusClassLoader.getState`
 2. Run the following expression in your debugger:
 ```
