@@ -18,7 +18,7 @@ new ObjectOutputStream(new FileOutputStream("../quarkus-in-memory-classes.ser"))
 ```
 3. Run the `DumpClassFiles` main class to generate the class files into the `target/generated-classes` folder
 4. Use a decompiler of your choice, e.g. fern-flower with IntelliJ, to look at the generated code.
-For your convenience I copied all the decompiled source files into the `src/main/java-dump` folder for quick inspection.
+For your convenience I copied all the decompiled source files into the [src/main/java-dump](src/main/java-dump) folder for quick inspection.
 
 ## Running the application in dev mode
 
